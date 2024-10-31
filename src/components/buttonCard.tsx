@@ -42,14 +42,14 @@ const Button: React.FC<ProductProps> = ({ ...product }) => {
         {btnToRender == "button_addToCart" ? (
 
             <div className={styles.button_addToCart} onClick={addProduct}>
-                <img src="/assets/images/icon-add-to-cart.svg" alt="" />
+                <img src="/images/icon-add-to-cart.svg" alt="" />
                 <button className={styles.button}>Add to Cart</button>
             </div>
         ) : (
             <div className={styles.button_controlQuantity}>
-                <div onClick={reduceProduct}><img src="/assets/images/icon-decrement-quantity.svg" alt="" /></div>
+                <div onClick={reduceProduct}><img src="/images/icon-decrement-quantity.svg" alt="" /></div>
                 <span>{quantityIndicator}</span>
-                <div onClick={addProduct}><img src="/assets/images/icon-increment-quantity.svg" alt="" /></div>
+                <div onClick={addProduct}><img src="/images/icon-increment-quantity.svg" alt="" /></div>
             </div>
         )
         }

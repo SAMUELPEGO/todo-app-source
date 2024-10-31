@@ -31,7 +31,7 @@ const Cart: React.FC = () => {
           <div key={product.name} className={styles.product_container}>
             <p className={styles.product_name}>{product.name}</p>
             <div className={styles.product_quantity}><span>{product.inCart + "x"}</span><span>@ {"$" + product.price.toFixed(2)}</span><span>{"$" + fixDecimals(product.inCart!, product.price)}</span></div>
-            <img src="/assets/images/icon-remove-item.svg" data-product_to_remove_name={product.name} alt="icon close" className={styles.icon_close} onClick={removeProduct} />
+            <img src="/images/icon-remove-item.svg" data-product_to_remove_name={product.name} alt="icon close" className={styles.icon_close} onClick={removeProduct} />
           </div>
         ))}
       </div>
@@ -39,7 +39,7 @@ const Cart: React.FC = () => {
         <div className={styles.total_price}>
           <span>Order Total</span><span>${totalPrice()!.toFixed(2)}</span>
         </div>
-        <div className={styles.marketin_text}><img src="/assets/images/icon-carbon-neutral.svg" alt="icon marketin text" /><span>This is a <small><strong>carbon-neutral</strong></small> delivery</span></div>
+        <div className={styles.marketin_text}><img src="/images/icon-carbon-neutral.svg" alt="icon marketin text" /><span>This is a <small><strong>carbon-neutral</strong></small> delivery</span></div>
         <div><button type="button" onClick={opening}>Confirm Order</button></div>
       </div>
       {open && <OrderConfirmedModal />}
