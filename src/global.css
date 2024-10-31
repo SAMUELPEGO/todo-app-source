@@ -1,0 +1,50 @@
+@font-face {
+  font-family: RedHatText;
+  src: url("/assets/fonts/RedHatText-VariableFont_wght.ttf");
+}
+:root {
+  font-family: RedHatText;
+
+  --white: hsl(0, 0%, 100%);
+  --Red: hsl(14, 86%, 42%);
+  --Red-Hover: hsl(14, 86%,30%);
+  --Green: hsl(159, 69%, 38%);
+  --Rose-50: hsl(20, 50%, 98%);
+  --Rose-100: hsl(13, 31%, 94%);
+  --Rose-300: hsl(14, 25%, 72%);
+  --Rose-400: hsl(7, 20%, 60%);
+  --Rose-500: hsl(12, 20%, 44%);
+  --Rose-900: hsl(14, 65%, 9%);
+
+  --breakpoint-576: 576px;
+  --breakpoint-768: 768px;
+  --breakpoint-992: 992px;
+  --breakpoint-1200: 1200px;
+ 
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+body {
+  background: var(--Rose-50);
+  padding: 20px;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+@media screen and (max-width: 556px) {
+  body {
+    padding: 15px;
+  }
+}
+@media screen and (min-width:1000px) {
+  body {
+    padding: 25px;
+    
+  }
+}
