@@ -17,7 +17,7 @@ const OrderConfirmedModal: React.FC = () => {
         <div className={`${styles.layer} ${!open ? styles.closed : styles.opened }`}>
             <div className={styles.modal}>
                 <header className={styles.header}>
-                    <img src="/images/icon-order-confirmed.svg" alt=" incon confirmed" width={35} height={35} />
+                    <img src="images/icon-order-confirmed.svg" alt=" incon confirmed" width={35} height={35} />
                     <h2>Order Confirmed</h2>
                     <p>We hope you enjoy food!</p>
                 </header>
