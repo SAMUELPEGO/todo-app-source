@@ -42,6 +42,7 @@
 }
 
 .product_container {
+    width: 100%;
     border-bottom: 1px solid var(--Rose-100);
     display: flex;
     flex-direction: column;

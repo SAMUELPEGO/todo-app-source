@@ -19,8 +19,8 @@ const OrderConfirmedModal: React.FC = () => {
     }
 
     return (<>
-    <motion.div animate={!open ? "closed" : "open"} variants={variants}>
-        <div className={`${styles.layer} `}>
+    
+        <div className={`${styles.layer}`}>
             <div className={styles.modal}>
                 <header className={styles.header}>
                     <img src="images/icon-order-confirmed.svg" alt=" incon confirmed" width={35} height={35} />
@@ -56,7 +56,6 @@ const OrderConfirmedModal: React.FC = () => {
                 <button type="button" onClick={close} className={styles.button}>Start New Order</button>
             </div>
         </div>
-        </motion.div>
     </>)
 }
 
