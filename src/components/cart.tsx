@@ -5,6 +5,7 @@ import { fixDecimals } from "../helpers/helpers";
 import OrderConfirmedModal from "./orderConfirmedModal";
 import { ModalContext } from "../context/modalContext";
 
+
 const Cart: React.FC = () => {
   const refBtnClose = useRef<HTMLImageElement | null>(null);
   const { cartInfo, totalPrice, removeFromCart, totalProducts } = useContext(CartContext);
@@ -24,7 +25,7 @@ const Cart: React.FC = () => {
   }
 
   return (
-    <div className={`${styles.cart} ${!isEmpty && styles.cart_empty}`}>
+    <div className={`${styles.cart} ${!isEmpty && styles.cart_empty}`} >
       <h2 className={styles.h2}>Your Cart({totalProducts()!})</h2>
       <div className={`${styles.products_container} ${!isEmpty && styles.hidden}`}>
         {cartInfo.products.map(product => (
