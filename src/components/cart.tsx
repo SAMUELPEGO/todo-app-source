@@ -14,7 +14,7 @@ const Cart: React.FC = () => {
   const { open, openModal } = useContext(ModalContext);
   
   const variants = {
-    open: { opacity: 1, display:"flex"},
+    open: { opacity: 1, display:"flex",x:0},
     closed: { opacity: 0, display:"none"}
   }
 
@@ -35,7 +35,7 @@ const Cart: React.FC = () => {
       <h2 className={styles.h2}>Your Cart({totalProducts()!})</h2>
       <div className={`${styles.products_container} ${!isEmpty && styles.hidden}`}>
         {cartInfo.products.map(product => (
-          <motion.div animate={"open"} variants={variants} transition={{duration:.5}} initial={{ opacity: 0}}>
+          <motion.div animate={"open"} variants={variants} transition={{duration:.5}} initial={{ opacity: 0,x:-10}}>
           <div key={product.name} className={styles.product_container}>
             <p className={styles.product_name}>{product.name}</p>
             <div className={styles.product_quantity}><span>{product.inCart + "x"}</span><span>@ {"$" + product.price.toFixed(2)}</span><span>{"$" + fixDecimals(product.inCart!, product.price)}</span></div>
