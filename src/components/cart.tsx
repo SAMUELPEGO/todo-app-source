@@ -11,7 +11,7 @@ const Cart: React.FC = () => {
   const refBtnClose = useRef<HTMLImageElement | null>(null);
   const { cartInfo, totalPrice, removeFromCart, totalProducts } = useContext(CartContext);
   const [isEmpty, setIsEmpty] = useState<number>(0);
-  const { open, openModal } = useContext(ModalContext);
+  const { openModal } = useContext(ModalContext);
   
   const variants = {
     open: { opacity: 1, display:"flex",x:0},

@@ -7,11 +7,7 @@ import { motion } from "framer-motion";
 
 const OrderConfirmedModal: React.FC = () => {
     const { cartInfo, totalPrice, cleanCart } = useContext(CartContext);
-    const {open,closeModal} = useContext(ModalContext);
-    const variants = {
-        open: { opacity: 1, x: 0 },
-        closed: { opacity: 0, x: "-100%" },
-      }
+    const {closeModal} = useContext(ModalContext);
 
     const close = () => {
         cleanCart()
